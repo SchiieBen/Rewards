@@ -5,6 +5,7 @@ The program redeems points in Microsoft Rewards using pyautogui. Be careful, it 
 OBS: The program needs a tcl file (You can find it at 
 https://github.com/rdbende/Azure-ttk-theme/tree/main
 
+And I forgot, the program is in portuguese. Good luck with it xD
 This is my very first project. I learned everything I know while trying to make this.
 
 Things I need to develop:
