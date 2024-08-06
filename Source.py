@@ -46,9 +46,9 @@ def Topicos_rewards():
     if keyboard.is_pressed('esc'):
         sys.exit()
     pg.write("https://rewards.bing.com/")
-    time.sleep(0.6)
+    time.sleep(0.5)
     pg.press("enter")
-    time.sleep(2.2)
+    time.sleep(2)
     for x, y in coordenadas:
         if keyboard.is_pressed('esc'):
                 sys.exit()
@@ -93,9 +93,9 @@ imagens_procuradas = [
 def clicar_na_imagem(posicao_imagem):
     centro = pg.center(posicao_imagem)
     pg.moveTo(centro)
-    time.sleep(0.5)
+    time.sleep(0.2)
     pg.click() 
-    time.sleep(1.5)
+    time.sleep(1)
     pg.hotkey("ctrl", "w")
     time.sleep(0.2)
 
@@ -107,13 +107,13 @@ def procurar_e_scrollar():
             if keyboard.is_pressed('esc'):
                 sys.exit()
             pg.scroll(-350)
-            time.sleep(1.6)
+            time.sleep(1.5)
             tentativas += 1
             for imagem in imagens_procuradas:
                 time.sleep(0.5)
                 encontrado = pg.locateOnScreen(imagem, confidence=0.8)
                 if encontrado:
-                    time.sleep(0.3)
+                    time.sleep(0.2)
                     if keyboard.is_pressed('esc'):
                         sys.exit()
                     clicar_na_imagem(encontrado)
@@ -177,11 +177,11 @@ Janela.mainloop()
 # # # # # # # --------------------------------------------------------------------------
 
 pg.press('win')
-time.sleep(0.5)
+time.sleep(0.2)
 pg.write(navegador)
-time.sleep(0.5)
+time.sleep(0.2)
 pg.press("enter")
-time.sleep(10)
+time.sleep(4)
 
 verificar_janela_maximizada()
 time.sleep(0.3)
@@ -209,9 +209,9 @@ time.sleep(2)
 alfabeto = [chr(i) for i in range(ord('a'), ord('z')+1)]
 
 base_dia = {
-    "segunda": "", "segunda feira": "","seg": "","segunda-feira": "","sexta": "", "sexta feira": "", "sexta-feira": "",
-    "terça": "2", "terça feira": "2", "ter": "2", "terça-feira":"2", "sabado": "2",
-    "quarta": "4", "quarta feira": "4", "qua":"4", "quarta-feira": "4", "domingo": "4",
+    "segunda": "", "segunda feira": "","seg": "","segunda-feira": "","sexta": "", "sexta feira": "", "sexta-feira": "", "sex": "",
+    "terça": "2", "terça feira": "2", "ter": "2", "terça-feira":"2", "sabado": "2", "sab": "2",
+    "quarta": "4", "quarta feira": "4", "qua":"4", "quarta-feira": "4", "domingo": "4", "dom": "4",
     "quinta": "6", "quinta feira": "6", "qui": "6", "quinta-feira": "6"
 }
 
@@ -226,8 +226,8 @@ for letra in alfabeto:
         alfabeto = [chr(i) for i in range(ord('a'), ord('d')+1)]
         for letra2 in alfabeto:
             termo = letra2 + ("1" if data in ["segunda", "segunda feira","seg","segunda-feira","sexta","sexta feira","sex","sexta-feira"] else 
-                              "3" if data in ["terça", "terça feira", "ter", "terça-feira", "sabado"] else 
-                              "5" if data in ["quarta", "quarta feira", "qua", "quarta-feira", "domingo"] else
+                              "3" if data in ["terça", "terça feira", "ter", "terça-feira", "sabado", "sab"] else 
+                              "5" if data in ["quarta", "quarta feira", "qua", "quarta-feira", "domingo", "dom"] else
                               "7" if data in ["quinta", "quinta feira", "qui", "quinta-feira"] else "")
             pg.write(termo)
             pg.press("enter")
