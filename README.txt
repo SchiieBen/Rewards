@@ -1,11 +1,11 @@
 Testing GitHub (I actually don't know what I am doing, lmao)
 
-The program redeems points in Microsoft Rewards using pyautogui. Be careful, it uses coordinates (it is set for monitors 1280x1024 at 100%).
+The code is in PORTUGUESE!!
+The program redeems points using pyautogui and also searches in bing to get points from it
 
-OBS: The program needs a tcl file (You can find it at 
+OBS: The program needs a tcl file. You can find it at:
 https://github.com/rdbende/Azure-ttk-theme/tree/main
 
-The program is in portuguese. Good luck with it xD
 This is my very first project. I learned everything I know while trying to make this.
 
 Things I need to develop:
@@ -16,4 +16,4 @@ Things I need to develop:
 
 Bugs:
 -> ESC not working sometimes
--> If your monitor is different from 1280x1024 (5:4) it won't work
+-> If something in the actual site gets different it won't work, like some pop up or any redirect before the actual screen
